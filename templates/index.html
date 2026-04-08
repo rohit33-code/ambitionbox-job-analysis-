@@ -1,0 +1,128 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+
+<div id="loader" class="loader">
+    <h3>Loading... ⏳</h3>
+</div>
+<div class="wrapper fade-in">
+
+    <div class="main-card p-5">
+
+        <div class="text-center header-section">
+            <h2>Welcome </h2>
+            <h4>Find Your Dream Company </h4>
+            <p>Professional insights and data-driven career analysis</p>
+        </div>
+
+        <div class="container mt-5">
+        <form id="mainForm" method="GET" class="mx-auto" style="max-width: 500px;">
+
+            <div class="row g-4">
+
+                <div class="mb-3">
+                    <label class="form-label">Location</label>
+                    <input list="locations" name="location" class="form-control" placeholder="Select location...">
+                    <datalist id="locations">
+                        {% for loc in locations %}
+                           <option value="{{ loc }}">
+                        {% endfor %}
+                    </datalist>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label" >Expect Salary</label>
+                    <input list="salaries" name="salaries" class="form-control" placeholder="Select Salary...">
+                    <datalist id="salaries">
+                        {% for sal in salaries %}
+                           <option value="{{ sal }}">
+                        {% endfor %}
+                    </datalist>
+                        
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Industry</label>
+                    <input list = "about" name = "about"  class="form-control" placeholder="Select Industry.......">
+                    <datalist id="about">
+                        {% for ab in about %}
+                           <option value="{{ ab }}"></option>
+                        {% endfor %}
+                    </datalist>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label" >Minimum Rating</label>
+                    <input list="ratings" name="rating"  class="form-control" placeholder="Select ratings....." >
+                    <datalist id="ratings">
+                        {% for i in ratings %}
+                           <option value="{{ i }}"></option>
+                        {% endfor %}
+                    </datalist>
+                </div>
+
+                <!-- <div class="col-12 mb-3">
+                    <label>Company Type</label>
+                    <select name="type" class="form-control">
+                        <option>Select Type</option>
+                        <option>Startup</option>
+                        <option>MNC</option>
+                        <option>Product-based</option>
+                        <option>Service-based</option>
+                    </select>
+                </div> -->
+
+            </div>
+
+            
+            <div class="output-box mt-4 p-3">
+                <label class="fw-bold">Select Output</label><br>
+                <label class="me-3">
+                    <input type="radio" name="output" value="table"> 📊 Show Table
+                </label>
+                <label>
+                    <input type="radio" name="output" value="visual"> 📈 Show Visualization
+                </label>
+            </div>
+
+          
+            <button class="btn btn-primary w-100 mt-3">Submit</button>
+
+        </form>
+        </div>
+    </div>
+</div>
+
+<script>
+    const form = document.getElementById("mainForm");
+
+    form.addEventListener("submit", function(e) {
+        e.preventDefault();
+
+        const output = document.querySelector('input[name="output"]:checked');
+
+        if (!output) {
+            alert("Please select output type!");
+            return;
+        }
+
+        if (output.value === "table") {
+            form.action = "/results";
+        } else {
+            form.action = "/visuals";
+        }
+
+        form.submit();
+    });
+</script>
+
+<script>
+    window.addEventListener("load", function() {
+        document.getElementById("loader").style.display = "none";
+    });
+</script>
+
+
+{% endblock %}

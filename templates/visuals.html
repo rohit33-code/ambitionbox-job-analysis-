@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block title %}Visuals{% endblock %}
+
+{% block content %}
+
+<div class="container mt-5 fade-in">
+
+    <h2 class="text-center mb-4">📊 Interactive Dashboard</h2>
+
+    <a href="/" class="btn btn-dark mb-3">🔍 New Search</a>
+
+    <div class="row g-4">
+
+        <div class="col-md-6">
+            {{ graph1 | safe }}
+        </div>
+
+        <div class="col-md-6">
+            {{ graph2 | safe }}
+        </div>
+
+        <div class="col-md-6">
+            {{ graph3 | safe }}
+        </div>
+
+        <div class="col-md-6">
+            {{ graph4 | safe }}
+        </div>
+
+        <div class="col-md-6">
+            {{ graph5 | safe }}
+        </div>
+
+        <div class="col-md-6">
+            {{ graph6 | safe }}
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}

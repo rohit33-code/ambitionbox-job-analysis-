@@ -1,0 +1,179 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #eef2f7, #dfe6f1);
+    font-family: Arial, sans-serif;
+    transition: 0.3s ease;
+}
+
+
+.wrapper {
+    width: 50%;
+    min-height: 100vh;
+    padding: 40px;
+    margin: auto;
+}
+
+.main-card {
+    width: 100%;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+    padding: 30px;
+    color: black
+
+}
+
+.header-section {
+    background: linear-gradient(135deg, #2f4380, #6f42c1);
+    color: white;
+    padding: 40px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+}
+
+label {
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+input, select {
+    border-radius: 10px !important;
+    padding: 12px;
+    border: 1px solid #ddd;
+}
+
+input:focus, select:focus {
+    border-color: #4e73df;
+    box-shadow: 0 0 10px rgba(78,115,223,0.2);
+}
+
+.output-box {
+    background: #f8f9fc;
+    border-radius: 10px;
+}
+
+button {
+    border-radius: 10px !important;
+    padding: 14px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+
+.glass-nav {
+    background: linear-gradient(135deg, #1e2c54, #371a6e);
+    backdrop-filter: blur(10px);
+    border-radius: 0 0 15px 15px;
+}
+
+.nav-btn {
+    color: white;
+    text-decoration: none;
+    margin-left: 15px;
+    padding: 8px 15px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.nav-btn:hover {
+    background: rgba(255,255,255,0.2);
+}
+
+.card-custom {
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.card-custom:hover {
+    transform: translateY(-5px);
+}
+
+table {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.area{
+    background: #1e2c54;
+}
+
+.fade-in {
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.loader {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.dark-mode {
+    background: #121212 !important;
+    color: white !important;
+}
+
+.dark-mode .main-card {
+    background: #1e1e1e;
+    color: white;
+}
+
+.dark-mode table {
+    color: white;
+}
+
+.dark-mode .output-box {
+    background: #2a2a2a !important;
+    color: white;
+}
+
+.dark-mode input {
+    background: #1e1e1e !important;
+    color: white !important;
+    border: 1px solid #555;
+}
+
+.dark-mode input::placeholder {
+    color: #bbb !important;
+}
+
+
+.dark-mode input[list] {
+    color: white !important;
+}
+
+.dark-mode input:focus {
+    background: #1e1e1e;
+    color: white;
+    border-color: #6f42c1;
+}
+
+.dark-mode label,
+.dark-mode .form-label {
+    /* display: block !important; */
+    color: #ffffff !important;
+    /* opacity: 1 !important;
+    visibility: visible !important; */
+}
+
+.dark-mode * {
+    color: inherit;
+}
+
