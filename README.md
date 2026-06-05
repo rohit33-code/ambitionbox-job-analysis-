@@ -37,19 +37,19 @@ A Flask-based web application that allows users to explore, filter, and analyze 
 
 ### 🏠 Home Page (Light Mode)
 
-![Home Light](screenshorts/home_light_page.png)
+![Home Light](screenshots/home_light_page.png)
 
 ### 🌙 Home Page (Dark Mode)
 
-![Home Dark](screenshorts/home_dark_page.png)
+![Home Dark](screenshots/home_dark_page.png)
 
 ### 📊 Results Table
 
-![Results](screenshorts/result_page.png)
+![Results](screenshots/result_page.png)
 
 ### 📈 Visualization Dashboard
 
-![Visuals](screenshorts/visual_page.png)
+![Visuals](screenshots/visual_page.png)
 
 
 ---
