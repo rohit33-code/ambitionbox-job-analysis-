@@ -37,28 +37,27 @@ A Flask-based web application that allows users to explore, filter, and analyze 
 
 ### 🏠 Home Page (Light Mode)
 
-![Home Light](screenshots/home_light.png)
+![Home Light](screenshorts/home_light_page.png)
 
 ### 🌙 Home Page (Dark Mode)
 
-![Home Dark](screenshots/home_dark.png)
+![Home Dark](screenshorts/home_dark_page.png)
 
 ### 📊 Results Table
 
-![Results](screenshots/results.png)
+![Results](screenshorts/result_page.png)
 
 ### 📈 Visualization Dashboard
 
-![Visuals](screenshots/visuals.png)
+![Visuals](screenshorts/visual_page.png)
 
-![Visuals](screenshots/dashboard.png)
 
 ---
 
 ## ⚙️ Installation & Setup
 
 ```bash
-git clone https://github.com/Bhavesh950/ambitionbox-job-analysis.git
+git clone https://github.com/rohit33-code/ambitionbox-job-analysis.git
 cd ambitionbox-job-analysis
 pip install -r requirements.txt
 python app.py
@@ -88,7 +87,7 @@ ambitionbox-job-analysis/
 │   └── css/
 │       └── style.css
 │
-├── screenshots/
+├── screenshorts/
 ├── ambitionbox_companies.csv
 └── README.md
 ```
@@ -99,7 +98,6 @@ ambitionbox-job-analysis/
 
 * 🔐 User authentication system
 * 📊 Advanced filters
-* ☁️ Deploy on cloud (Render/Heroku)
 * 📱 Mobile responsiveness improvements
 
 ---
